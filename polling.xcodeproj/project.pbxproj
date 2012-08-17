@@ -1,0 +1,268 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C67F85DB15DF0ABA006D1582 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C67F85DA15DF0ABA006D1582 /* UIKit.framework */; };
+		C67F85DD15DF0ABA006D1582 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C67F85DC15DF0ABA006D1582 /* Foundation.framework */; };
+		C67F85DF15DF0ABA006D1582 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C67F85DE15DF0ABA006D1582 /* CoreGraphics.framework */; };
+		C67F85E515DF0ABA006D1582 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C67F85E315DF0ABA006D1582 /* InfoPlist.strings */; };
+		C67F85E715DF0ABA006D1582 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C67F85E615DF0ABA006D1582 /* main.m */; };
+		C67F85EB15DF0ABA006D1582 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C67F85EA15DF0ABA006D1582 /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C67F85D615DF0ABA006D1582 /* polling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = polling.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C67F85DA15DF0ABA006D1582 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C67F85DC15DF0ABA006D1582 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C67F85DE15DF0ABA006D1582 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C67F85E215DF0ABA006D1582 /* polling-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "polling-Info.plist"; sourceTree = "<group>"; };
+		C67F85E415DF0ABA006D1582 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C67F85E615DF0ABA006D1582 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C67F85E815DF0ABA006D1582 /* polling-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "polling-Prefix.pch"; sourceTree = "<group>"; };
+		C67F85E915DF0ABA006D1582 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C67F85EA15DF0ABA006D1582 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C67F85D315DF0ABA006D1582 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C67F85DB15DF0ABA006D1582 /* UIKit.framework in Frameworks */,
+				C67F85DD15DF0ABA006D1582 /* Foundation.framework in Frameworks */,
+				C67F85DF15DF0ABA006D1582 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C67F85CB15DF0ABA006D1582 = {
+			isa = PBXGroup;
+			children = (
+				C67F85E015DF0ABA006D1582 /* polling */,
+				C67F85D915DF0ABA006D1582 /* Frameworks */,
+				C67F85D715DF0ABA006D1582 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C67F85D715DF0ABA006D1582 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C67F85D615DF0ABA006D1582 /* polling.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C67F85D915DF0ABA006D1582 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C67F85DA15DF0ABA006D1582 /* UIKit.framework */,
+				C67F85DC15DF0ABA006D1582 /* Foundation.framework */,
+				C67F85DE15DF0ABA006D1582 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C67F85E015DF0ABA006D1582 /* polling */ = {
+			isa = PBXGroup;
+			children = (
+				C67F85E915DF0ABA006D1582 /* AppDelegate.h */,
+				C67F85EA15DF0ABA006D1582 /* AppDelegate.m */,
+				C67F85E115DF0ABA006D1582 /* Supporting Files */,
+			);
+			path = polling;
+			sourceTree = "<group>";
+		};
+		C67F85E115DF0ABA006D1582 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C67F85E215DF0ABA006D1582 /* polling-Info.plist */,
+				C67F85E315DF0ABA006D1582 /* InfoPlist.strings */,
+				C67F85E615DF0ABA006D1582 /* main.m */,
+				C67F85E815DF0ABA006D1582 /* polling-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C67F85D515DF0ABA006D1582 /* polling */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C67F85EE15DF0ABA006D1582 /* Build configuration list for PBXNativeTarget "polling" */;
+			buildPhases = (
+				C67F85D215DF0ABA006D1582 /* Sources */,
+				C67F85D315DF0ABA006D1582 /* Frameworks */,
+				C67F85D415DF0ABA006D1582 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = polling;
+			productName = polling;
+			productReference = C67F85D615DF0ABA006D1582 /* polling.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C67F85CD15DF0ABA006D1582 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Maneesh Goel";
+			};
+			buildConfigurationList = C67F85D015DF0ABA006D1582 /* Build configuration list for PBXProject "polling" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C67F85CB15DF0ABA006D1582;
+			productRefGroup = C67F85D715DF0ABA006D1582 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C67F85D515DF0ABA006D1582 /* polling */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C67F85D415DF0ABA006D1582 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C67F85E515DF0ABA006D1582 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C67F85D215DF0ABA006D1582 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C67F85E715DF0ABA006D1582 /* main.m in Sources */,
+				C67F85EB15DF0ABA006D1582 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C67F85E315DF0ABA006D1582 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C67F85E415DF0ABA006D1582 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C67F85EC15DF0ABA006D1582 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C67F85ED15DF0ABA006D1582 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C67F85EF15DF0ABA006D1582 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "polling/polling-Prefix.pch";
+				INFOPLIST_FILE = "polling/polling-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C67F85F015DF0ABA006D1582 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "polling/polling-Prefix.pch";
+				INFOPLIST_FILE = "polling/polling-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C67F85D015DF0ABA006D1582 /* Build configuration list for PBXProject "polling" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C67F85EC15DF0ABA006D1582 /* Debug */,
+				C67F85ED15DF0ABA006D1582 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C67F85EE15DF0ABA006D1582 /* Build configuration list for PBXNativeTarget "polling" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C67F85EF15DF0ABA006D1582 /* Debug */,
+				C67F85F015DF0ABA006D1582 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C67F85CD15DF0ABA006D1582 /* Project object */;
+}
