@@ -12,8 +12,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [Parse setApplicationId:@"rMPgN5PDNKXoOlhRmR3bmwldfTyBgXvzgmxACBKh"
+                  clientKey:@"iD5pVTkjFHFbptO6ubB38k00YeFLNCWJHychs7fg"];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    UITabBarController *pollingViewController = [UITabBarController new];
+    CreatePollViewController *cpvc = [[CreatePollViewController alloc] init];
+    
+                                                          
+    VotePollTableViewController *vptvc = [[VotePollTableViewController alloc] init];
+    UINavigationController *votingNavigationController = [[UINavigationController alloc] initWithRootViewController:vptvc];
+    PollResultsTableViewController *prtvc = [[PollResultsTableViewController alloc] init];
+    
+    cpvc.title = @"Create Poll!";
+    vptvc.title = @"Vote!";
+    prtvc.title = @"Results!";
+    NSArray *viewControllers = [NSArray arrayWithObjects:cpvc, votingNavigationController, prtvc, nil];
+    [pollingViewController setViewControllers:viewControllers];
+    self.window.rootViewController = pollingViewController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
