@@ -44,15 +44,15 @@
 +(NSArray *)getResultsForQuestion:(PFObject *)questionObject andResponse:(int)response {
     PFQuery *query = [PFQuery queryWithClassName:@"vote"];
     [query whereKey:@"parent" equalTo:questionObject];
-    int numResponses = [[query findObjects] count];
+    float numResponses = [[query findObjects] count];
     [query whereKey:@"response" equalTo:[NSNumber numberWithInt:response]];
-    int numVotes = [[query findObjects] count];
-    int percent;
+    float numVotes = [[query findObjects] count];
+    float percent;
     if (numResponses !=0) {
         percent = numVotes/numResponses *100;
     } else {
         percent = 0;
     }
-    return [NSArray arrayWithObjects:[NSNumber numberWithInt:numVotes], [NSNumber numberWithInt:percent], nil];
+    return [NSArray arrayWithObjects:[NSNumber numberWithFloat:numVotes], [NSNumber numberWithFloat:percent], nil];
 }
 @end
