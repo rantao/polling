@@ -8,6 +8,7 @@
 
 #import "VotePollTableViewController.h"
 #import "QuestionTableViewController.h"
+#import "ParseStore.h"
 @interface VotePollTableViewController () {
     NSArray *parseResults;
 }
@@ -15,17 +16,9 @@
 
 @implementation VotePollTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-        
-    }
-    return self;
-}
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    //NSLog(@"calling cell for row");
     UITableViewCell *tableViewCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     tableViewCell.textLabel.text = [[parseResults objectAtIndex:[indexPath row]] objectForKey:@"question"];
     return tableViewCell;
@@ -34,24 +27,31 @@
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"woo");
+    //NSLog(@"woo");
     QuestionTableViewController *qtvc = [[QuestionTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
     qtvc.question = [[parseResults objectAtIndex:[indexPath row]] objectForKey:@"question"];
-    qtvc.questionID = [[parseResults objectAtIndex:[indexPath row]] objectForKey:@"objectId"];
+    qtvc.questionObject = [parseResults objectAtIndex:[indexPath row]];
     [self.navigationController pushViewController:qtvc animated:YES];
 }
 
 -(int)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    //NSLog(@"asking how many rows in table");
     return [parseResults count];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    //NSLog(@"view will appear");
+    parseResults = [ParseStore getPollQuestions];
+    //self.tableView.delegate = self;
+    //self.tableView.dataSource = self;
+    [self.tableView reloadData];
+    //NSLog(@"end of view will appear");
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    PFQuery *query = [PFQuery queryWithClassName:@"poll"];
-    parseResults = [query findObjects];
-    self.voteTableView.delegate = self;
-    self.voteTableView.dataSource = self;
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  

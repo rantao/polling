@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ParseStore.h"
 
 @interface CreatePollViewController : UIViewController
 

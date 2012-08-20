@@ -11,11 +11,8 @@
 		C605F00615DF0CD60023ADCB /* CreatePollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C605F00415DF0CD60023ADCB /* CreatePollViewController.m */; };
 		C605F00715DF0CD60023ADCB /* CreatePollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C605F00515DF0CD60023ADCB /* CreatePollViewController.xib */; };
 		C605F00F15DF0EEF0023ADCB /* VotePollTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C605F00D15DF0EEF0023ADCB /* VotePollTableViewController.m */; };
-		C605F01015DF0EEF0023ADCB /* VotePollTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C605F00E15DF0EEF0023ADCB /* VotePollTableViewController.xib */; };
 		C605F01415DF0F020023ADCB /* PollResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C605F01215DF0F020023ADCB /* PollResultsTableViewController.m */; };
-		C605F01515DF0F020023ADCB /* PollResultsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C605F01315DF0F020023ADCB /* PollResultsTableViewController.xib */; };
 		C605F01915DF1A350023ADCB /* QuestionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C605F01715DF1A350023ADCB /* QuestionTableViewController.m */; };
-		C605F01A15DF1A350023ADCB /* QuestionTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C605F01815DF1A350023ADCB /* QuestionTableViewController.xib */; };
 		C67F85DB15DF0ABA006D1582 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C67F85DA15DF0ABA006D1582 /* UIKit.framework */; };
 		C67F85DD15DF0ABA006D1582 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C67F85DC15DF0ABA006D1582 /* Foundation.framework */; };
 		C67F85DF15DF0ABA006D1582 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C67F85DE15DF0ABA006D1582 /* CoreGraphics.framework */; };
@@ -30,6 +27,8 @@
 		C67F85FE15DF0B14006D1582 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C67F85F615DF0B14006D1582 /* Security.framework */; };
 		C67F85FF15DF0B14006D1582 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C67F85F715DF0B14006D1582 /* StoreKit.framework */; };
 		C67F860015DF0B14006D1582 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C67F85F815DF0B14006D1582 /* SystemConfiguration.framework */; };
+		C6F6BBCE15E2AF6800B52CB9 /* ParseStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F6BBCD15E2AF6800B52CB9 /* ParseStore.m */; };
+		C6F6BBD215E2CECF00B52CB9 /* PollResultsDisplayTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F6BBD015E2CECF00B52CB9 /* PollResultsDisplayTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,13 +38,10 @@
 		C605F00515DF0CD60023ADCB /* CreatePollViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreatePollViewController.xib; sourceTree = "<group>"; };
 		C605F00C15DF0EEF0023ADCB /* VotePollTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VotePollTableViewController.h; sourceTree = "<group>"; };
 		C605F00D15DF0EEF0023ADCB /* VotePollTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VotePollTableViewController.m; sourceTree = "<group>"; };
-		C605F00E15DF0EEF0023ADCB /* VotePollTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VotePollTableViewController.xib; sourceTree = "<group>"; };
 		C605F01115DF0F020023ADCB /* PollResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PollResultsTableViewController.h; sourceTree = "<group>"; };
 		C605F01215DF0F020023ADCB /* PollResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PollResultsTableViewController.m; sourceTree = "<group>"; };
-		C605F01315DF0F020023ADCB /* PollResultsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PollResultsTableViewController.xib; sourceTree = "<group>"; };
 		C605F01615DF1A350023ADCB /* QuestionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionTableViewController.h; sourceTree = "<group>"; };
 		C605F01715DF1A350023ADCB /* QuestionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionTableViewController.m; sourceTree = "<group>"; };
-		C605F01815DF1A350023ADCB /* QuestionTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionTableViewController.xib; sourceTree = "<group>"; };
 		C67F85D615DF0ABA006D1582 /* polling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = polling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C67F85DA15DF0ABA006D1582 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C67F85DC15DF0ABA006D1582 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -64,6 +60,10 @@
 		C67F85F615DF0B14006D1582 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C67F85F715DF0B14006D1582 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C67F85F815DF0B14006D1582 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C6F6BBCC15E2AF6800B52CB9 /* ParseStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseStore.h; sourceTree = "<group>"; };
+		C6F6BBCD15E2AF6800B52CB9 /* ParseStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseStore.m; sourceTree = "<group>"; };
+		C6F6BBCF15E2CECF00B52CB9 /* PollResultsDisplayTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PollResultsDisplayTableViewController.h; sourceTree = "<group>"; };
+		C6F6BBD015E2CECF00B52CB9 /* PollResultsDisplayTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PollResultsDisplayTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +89,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C66B6B6315DF2F9B00E5729B /* Create Poll */ = {
+			isa = PBXGroup;
+			children = (
+				C605F00315DF0CD60023ADCB /* CreatePollViewController.h */,
+				C605F00415DF0CD60023ADCB /* CreatePollViewController.m */,
+				C605F00515DF0CD60023ADCB /* CreatePollViewController.xib */,
+			);
+			name = "Create Poll";
+			sourceTree = "<group>";
+		};
+		C66B6B6515DF2FB100E5729B /* Vote Poll */ = {
+			isa = PBXGroup;
+			children = (
+				C605F01615DF1A350023ADCB /* QuestionTableViewController.h */,
+				C605F01715DF1A350023ADCB /* QuestionTableViewController.m */,
+				C605F00C15DF0EEF0023ADCB /* VotePollTableViewController.h */,
+				C605F00D15DF0EEF0023ADCB /* VotePollTableViewController.m */,
+			);
+			name = "Vote Poll";
+			sourceTree = "<group>";
+		};
+		C66B6B6615DF2FC100E5729B /* Poll Results */ = {
+			isa = PBXGroup;
+			children = (
+				C605F01115DF0F020023ADCB /* PollResultsTableViewController.h */,
+				C605F01215DF0F020023ADCB /* PollResultsTableViewController.m */,
+				C6F6BBCF15E2CECF00B52CB9 /* PollResultsDisplayTableViewController.h */,
+				C6F6BBD015E2CECF00B52CB9 /* PollResultsDisplayTableViewController.m */,
+			);
+			name = "Poll Results";
+			sourceTree = "<group>";
+		};
 		C67F85CB15DF0ABA006D1582 = {
 			isa = PBXGroup;
 			children = (
@@ -128,21 +160,13 @@
 		C67F85E015DF0ABA006D1582 /* polling */ = {
 			isa = PBXGroup;
 			children = (
+				C6F6BBCA15E2AF5500B52CB9 /* ParseStore */,
+				C66B6B6615DF2FC100E5729B /* Poll Results */,
+				C66B6B6515DF2FB100E5729B /* Vote Poll */,
+				C66B6B6315DF2F9B00E5729B /* Create Poll */,
 				C67F85E915DF0ABA006D1582 /* AppDelegate.h */,
 				C67F85EA15DF0ABA006D1582 /* AppDelegate.m */,
 				C67F85E115DF0ABA006D1582 /* Supporting Files */,
-				C605F00315DF0CD60023ADCB /* CreatePollViewController.h */,
-				C605F00415DF0CD60023ADCB /* CreatePollViewController.m */,
-				C605F00515DF0CD60023ADCB /* CreatePollViewController.xib */,
-				C605F00C15DF0EEF0023ADCB /* VotePollTableViewController.h */,
-				C605F00D15DF0EEF0023ADCB /* VotePollTableViewController.m */,
-				C605F00E15DF0EEF0023ADCB /* VotePollTableViewController.xib */,
-				C605F01615DF1A350023ADCB /* QuestionTableViewController.h */,
-				C605F01715DF1A350023ADCB /* QuestionTableViewController.m */,
-				C605F01815DF1A350023ADCB /* QuestionTableViewController.xib */,
-				C605F01115DF0F020023ADCB /* PollResultsTableViewController.h */,
-				C605F01215DF0F020023ADCB /* PollResultsTableViewController.m */,
-				C605F01315DF0F020023ADCB /* PollResultsTableViewController.xib */,
 			);
 			path = polling;
 			sourceTree = "<group>";
@@ -156,6 +180,15 @@
 				C67F85E815DF0ABA006D1582 /* polling-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C6F6BBCA15E2AF5500B52CB9 /* ParseStore */ = {
+			isa = PBXGroup;
+			children = (
+				C6F6BBCC15E2AF6800B52CB9 /* ParseStore.h */,
+				C6F6BBCD15E2AF6800B52CB9 /* ParseStore.m */,
+			);
+			name = ParseStore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,9 +244,6 @@
 			files = (
 				C67F85E515DF0ABA006D1582 /* InfoPlist.strings in Resources */,
 				C605F00715DF0CD60023ADCB /* CreatePollViewController.xib in Resources */,
-				C605F01015DF0EEF0023ADCB /* VotePollTableViewController.xib in Resources */,
-				C605F01515DF0F020023ADCB /* PollResultsTableViewController.xib in Resources */,
-				C605F01A15DF1A350023ADCB /* QuestionTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +260,8 @@
 				C605F00F15DF0EEF0023ADCB /* VotePollTableViewController.m in Sources */,
 				C605F01415DF0F020023ADCB /* PollResultsTableViewController.m in Sources */,
 				C605F01915DF1A350023ADCB /* QuestionTableViewController.m in Sources */,
+				C6F6BBCE15E2AF6800B52CB9 /* ParseStore.m in Sources */,
+				C6F6BBD215E2CECF00B52CB9 /* PollResultsDisplayTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

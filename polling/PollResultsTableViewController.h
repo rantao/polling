@@ -10,5 +10,6 @@
 #import <Parse/Parse.h>
 
 @interface PollResultsTableViewController : UITableViewController
-
+@property (nonatomic, strong) NSString *question;
+@property (nonatomic, strong) PFObject *questionObject;
 @end

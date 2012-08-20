@@ -8,6 +8,7 @@
 
 #import "QuestionTableViewController.h"
 #import <Parse/Parse.h>
+#import "ParseStore.h"
 
 @interface QuestionTableViewController () {
     int selectedRow;
@@ -86,25 +87,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"called row");
+    [ParseStore voteOnPoll:self.questionObject withResponse:[indexPath row]];
     selectedRow = indexPath.row;
-    PFQuery *query = [PFQuery queryWithClassName:@"vote"];
-    //change to CFUUID create instead of unique identifier
-    [query whereKey:@"voterID" equalTo:[[UIDevice currentDevice] uniqueIdentifier]];
-    [query whereKey:@"questionID" equalTo:self.questionID];
-    PFObject *result = [query getFirstObject];
-    if (result) {
-        [result setObject:[tableView cellForRowAtIndexPath:indexPath] forKey:@"response"];
-        [result setObject:self.questionID forKey:@"questionID"];
-        [result save];
-    } else {
-        //send to parse
-        result = [PFObject objectWithClassName:@"vote"];
-        [result setObject:[tableView cellForRowAtIndexPath:indexPath] forKey:@"response"];
-        [result setObject:self.questionID forKey:@"questionID"];
-        [result setObject:[[UIDevice currentDevice] uniqueIdentifier] forKey:@"voterID"];
-        [result save];
-    }
     [tableView reloadData];
 }
 

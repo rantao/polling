@@ -27,15 +27,15 @@
 }
 
 -(IBAction)submitQuestion {
-    PFObject *question = [PFObject objectWithClassName:@"poll"];
-    [question setObject:[self.questionText text] forKey:@"question"];
-    [question save];
-    self.questionText.text = @"";
+    if (self.questionText.text) {
+        [ParseStore submitQuestion:self.questionText.text];
+        self.questionText.text = @"";
+    }
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [self.questionText resignFirstResponder];
-    [self submitQuestion];
+    //[self submitQuestion];
     return YES;
 }
 
