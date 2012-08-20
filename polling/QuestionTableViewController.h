@@ -12,5 +12,4 @@
 @interface QuestionTableViewController : UITableViewController
 @property (nonatomic, strong) NSString *question;
 @property (nonatomic, strong) PFObject *questionObject;
-//@property (nonatomic, strong) IBOutlet UITableView *choicesTable;
 @end

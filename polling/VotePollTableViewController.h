@@ -10,5 +10,4 @@
 #import <Parse/Parse.h>
 #import "ParseStore.h"
 @interface VotePollTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
-//@property (nonatomic,strong) IBOutlet UITableView *voteTableView;
 @end

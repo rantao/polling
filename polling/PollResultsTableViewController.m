@@ -24,8 +24,6 @@
     return tableViewCell;
 }
 
-
-
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     PollResultsDisplayTableViewController *prdvc = [[PollResultsDisplayTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
     prdvc.question = [[parseResults objectAtIndex:[indexPath row]] objectForKey:@"question"];
@@ -42,12 +40,10 @@
     [self.tableView reloadData];
 }
 
-
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -60,8 +56,6 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -73,7 +67,6 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
     return 1;
 }
 

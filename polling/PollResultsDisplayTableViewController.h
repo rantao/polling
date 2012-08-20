@@ -9,9 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface PollResultsDisplayTableViewController : UITableViewController {
-    
-}
+@interface PollResultsDisplayTableViewController : UITableViewController
 @property (nonatomic, strong) NSString *question;
 @property (nonatomic, strong) PFObject *questionObject;
 @end

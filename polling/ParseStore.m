@@ -21,17 +21,14 @@
 }
 
 +(void)voteOnPoll:(PFObject *)question withResponse:(int)response {
-    //handle unique users
     PFQuery *query = [PFQuery queryWithClassName:@"vote"];
     [query whereKey:@"parent" equalTo:question];
     [query whereKey:@"user" equalTo:[PFUser currentUser]];
     PFObject *result = [query getFirstObject];
     if (result) {
-        //update vote
         [result setObject:[NSNumber numberWithInt:response] forKey:@"response"];
         [result save];
     } else {
-        //create vote, push to parse
         result = [PFObject objectWithClassName:@"vote"];
         [result setObject:[NSNumber numberWithInt:response] forKey:@"response"];
         [result setObject:question forKey:@"parent"];

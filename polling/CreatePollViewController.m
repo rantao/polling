@@ -21,13 +21,12 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
 
 -(IBAction)submitQuestion {
-    if (self.questionText.text) {
+    if (![self.questionText.text isEqualToString:@""]) {
         [ParseStore submitQuestion:self.questionText.text];
         self.questionText.text = @"";
     }
@@ -35,22 +34,17 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [self.questionText resignFirstResponder];
-    //[self submitQuestion];
     return YES;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
