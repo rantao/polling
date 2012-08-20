@@ -44,6 +44,8 @@
 {
     self = [super initWithStyle:style];
     if (self) {
+        self.tabBarItem.image = [UIImage imageNamed:@"graph_bar.png"];
+
     }
     return self;
 }

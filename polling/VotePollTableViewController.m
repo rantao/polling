@@ -8,6 +8,7 @@
 
 #import "VotePollTableViewController.h"
 #import "QuestionTableViewController.h"
+#import "CreatePollViewController.h"
 #import "ParseStore.h"
 @interface VotePollTableViewController () {
     NSArray *parseResults;
@@ -16,6 +17,15 @@
 
 @implementation VotePollTableViewController
 
+- (id)initWithStyle:(UITableViewStyle)style
+{
+    self = [super initWithStyle:style];
+    if (self) {
+        self.tabBarItem.image = [UIImage imageNamed:@"checkmark.png"];
+        
+    }
+    return self;
+}
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *tableViewCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
@@ -44,6 +54,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UIBarButtonItem *addQuestion = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(pushCreateQuestion)];
+    self.navigationItem.rightBarButtonItem=addQuestion;
+}
+
+- (void) pushCreateQuestion {
+    CreatePollViewController *cpvc = [CreatePollViewController new];
+    [self.navigationController pushViewController:cpvc animated:YES];
+    [self.tableView reloadData];
+
 }
 
 - (void)viewDidUnload
