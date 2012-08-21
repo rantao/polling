@@ -38,18 +38,24 @@
     
 }
 
-+(NSArray *)getResultsForQuestion:(PFObject *)questionObject andResponse:(int)response {
++(NSDictionary *)getResultsForQuestion:(PFObject *)questionObject {
     PFQuery *query = [PFQuery queryWithClassName:@"vote"];
     [query whereKey:@"parent" equalTo:questionObject];
-    float numResponses = [[query findObjects] count];
-    [query whereKey:@"response" equalTo:[NSNumber numberWithInt:response]];
-    float numVotes = [[query findObjects] count];
-    float percent;
-    if (numResponses !=0) {
-        percent = numVotes/numResponses *100;
-    } else {
-        percent = 0;
+    NSArray *questionVotes = [query findObjects];
+    float numResponses = [questionVotes count];
+    NSMutableDictionary *responseDict = [NSMutableDictionary dictionaryWithObjects:[NSArray arrayWithObjects:[NSNumber numberWithInt:0],[NSNumber numberWithInt:0], [NSNumber numberWithInt:0], [NSNumber numberWithInt:0], [NSNumber numberWithInt:0], nil] forKeys:[NSArray arrayWithObjects:[NSNumber numberWithInt:0],[NSNumber numberWithInt:1], [NSNumber numberWithInt:2], [NSNumber numberWithInt:3], [NSNumber numberWithInt:4], nil]];
+    for (PFObject *resp in questionVotes) {
+        int responseValue = [[resp objectForKey:@"response"] intValue];
+        int temp;
+        if (![responseDict objectForKey:[NSNumber numberWithInt:responseValue]]) {
+            temp = 0;
+        } else {
+            temp =[[responseDict objectForKey:[NSNumber numberWithInt:responseValue]] intValue];
+        }
+        temp++;
+        [responseDict setObject:[NSNumber numberWithInt:temp] forKey:[NSNumber numberWithInt:responseValue]];
     }
-    return [NSArray arrayWithObjects:[NSNumber numberWithFloat:numVotes], [NSNumber numberWithFloat:percent], nil];
+    [responseDict setObject:[NSNumber numberWithFloat:numResponses] forKey:@"total"];
+    return responseDict;
 }
 @end

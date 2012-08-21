@@ -11,12 +11,12 @@
 
 @interface PollResultsDisplayTableViewController ()
 @property (nonatomic, strong) NSArray *responseArray;
+@property (nonatomic, strong) NSDictionary *votingResults;
 @end
 
 @implementation PollResultsDisplayTableViewController
 @synthesize questionObject = _questionObject;
 @synthesize question = _question;
-
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     return self.question;
@@ -32,8 +32,13 @@
     
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
     cell.textLabel.text = [self.responseArray objectAtIndex:indexPath.row];
-    NSArray *votingResults = [ParseStore getResultsForQuestion:self.questionObject andResponse:[indexPath row]];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%d votes, %d%%", [[votingResults objectAtIndex:0] intValue], [[votingResults objectAtIndex:1] intValue]];
+    float percent;
+    if ([[self.votingResults objectForKey:@"total"] floatValue] == 0) {
+        percent = 0;
+    } else {
+        percent = 100*([[self.votingResults objectForKey:[NSNumber numberWithInt:[indexPath row]]] floatValue] / [[self.votingResults objectForKey:@"total"] floatValue]);
+    }
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%d votes, %.2f%%", [[self.votingResults objectForKey:[NSNumber numberWithInt:[indexPath row]]] intValue], percent];
     return cell;
 }
 
@@ -43,6 +48,10 @@
     if (self) {
     }
     return self;
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    self.votingResults = [ParseStore getResultsForQuestion:self.questionObject];
 }
 
 - (void)viewDidLoad

@@ -13,5 +13,5 @@
 +(void)submitQuestion:(NSString *)question;
 +(NSArray *)getPollQuestions;
 +(void)voteOnPoll:(PFObject *)question withResponse:(int)response;
-+(NSArray *)getResultsForQuestion:(PFObject *)questionObject andResponse:(int)response;
++(NSDictionary *)getResultsForQuestion:(PFObject *)questionObject;
 @end
